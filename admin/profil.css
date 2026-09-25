@@ -1,0 +1,433 @@
+/* =========================================
+   PROFIL ADMIN
+   RM RAJO SALERO
+========================================= */
+
+
+.profile-page {
+
+    width: 100%;
+
+    padding-bottom: 30px;
+
+}
+
+
+
+.profile-card {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    background: #fffdf9;
+
+    border: 1px solid #eadfd5;
+
+    border-radius: 26px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 12px 35px rgba(70, 30, 20, .06);
+
+}
+
+
+
+.profile-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid #eee3d9;
+
+}
+
+
+
+.profile-big-avatar {
+
+    width: 78px;
+
+    height: 78px;
+
+    min-width: 78px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #a51d1d;
+
+    color: #f6d78e;
+
+    border: 3px solid #d7af61;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+}
+
+
+
+.profile-label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #a51d1d;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+.profile-card-header h2 {
+
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 32px;
+
+    color: #291912;
+
+}
+
+
+
+.profile-card-header p {
+
+    margin: 3px 0 0;
+
+    color: #96857b;
+
+    font-size: 13px;
+
+}
+
+
+
+.profile-alert {
+
+    margin-top: 24px;
+
+    padding: 13px 16px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+}
+
+
+
+.profile-alert.success {
+
+    background: #e8f3eb;
+
+    border: 1px solid #c7dfcd;
+
+    color: #38704b;
+
+}
+
+
+
+.profile-alert.error {
+
+    background: #f9e2e0;
+
+    border: 1px solid #edc2bf;
+
+    color: #9b2424;
+
+}
+
+
+
+.profile-form {
+
+    padding-top: 28px;
+
+}
+
+
+
+.form-group {
+
+    margin-bottom: 22px;
+
+}
+
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #5f5148;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+
+.form-group input {
+
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #ded1c6;
+
+    border-radius: 12px;
+
+    background: #fff;
+
+    color: #2c201b;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: .2s ease;
+
+}
+
+
+
+.form-group input:focus {
+
+    border-color: #a51d1d;
+
+    box-shadow:
+        0 0 0 3px rgba(165, 29, 29, .08);
+
+}
+
+
+
+.profile-divider {
+
+    height: 1px;
+
+    background: #eee3d9;
+
+    margin: 5px 0 28px;
+
+}
+
+
+
+.password-heading {
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.password-heading h3 {
+
+    margin: 0 0 5px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 24px;
+
+    color: #291912;
+
+}
+
+
+
+.password-heading p {
+
+    margin: 0;
+
+    color: #96857b;
+
+    font-size: 12px;
+
+}
+
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+
+.profile-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 12px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #eee3d9;
+
+}
+
+
+
+.btn-profile {
+
+    min-width: 150px;
+
+    height: 48px;
+
+    padding: 0 22px;
+
+    border-radius: 12px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+
+.btn-profile.cancel {
+
+    background: #f3eee8;
+
+    color: #66574e;
+
+    border: 1px solid #e2d7ce;
+
+}
+
+
+
+.btn-profile.save {
+
+    border: none;
+
+    background: #a51d1d;
+
+    color: white;
+
+}
+
+
+
+.btn-profile.save:hover {
+
+    background: #821616;
+
+}
+
+
+
+.btn-profile.cancel:hover {
+
+    background: #ebe3db;
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+
+@media (max-width: 700px) {
+
+
+    .profile-card {
+
+        padding: 25px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .profile-card-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .profile-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .btn-profile {
+
+        width: 100%;
+
+    }
+
+}

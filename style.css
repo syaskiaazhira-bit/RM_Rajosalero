@@ -1,0 +1,2949 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f8f1e7;
+    color: #30231e;
+    line-height: 1.6;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 70px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #7d1f1b;
+    color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f2c66d;
+}
+
+
+/* =========================
+   HERO / SLIDER
+========================= */
+
+.hero {
+    width: 100%;
+}
+
+.slider {
+    width: 100%;
+    height: 510px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform: translateX(-100%);
+    will-change: transform;
+}
+
+.slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide-content h1 span {
+    display: block;
+}
+
+.slide-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(30, 15, 10, 0.85),
+        rgba(30, 15, 10, 0.48),
+        rgba(30, 15, 10, 0.15)
+    );
+}
+
+.slide-content {
+    width: 86%;
+    max-width: 1200px;
+    height: 100%;
+
+    margin: auto;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    color: white;
+}
+
+.slide-content h1 {
+    max-width: 650px;
+
+    font-size: 48px;
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+.slide-content p {
+    max-width: 590px;
+
+    color: #f4e9dc;
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+.slide-content button,
+.promo-content button {
+    border: none;
+
+    background: #b52d27;
+    color: white;
+
+    padding: 13px 23px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.slide-content button:hover,
+.promo-content button:hover {
+    background: #d13a32;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SLIDER ARROW
+========================= */
+
+.slider-arrow {
+    width: 43px;
+    height: 43px;
+
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 5;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.22);
+    color: white;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+.slider-arrow:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.slider-arrow.prev {
+    left: 25px;
+}
+
+.slider-arrow.next {
+    right: 25px;
+}
+
+
+/* =========================
+   SLIDER DOT
+========================= */
+
+.slider-dots {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 8px;
+
+    z-index: 5;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.5);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.25);
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 70px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    color: #7d1f1b;
+    font-size: 31px;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #806b5d;
+    font-size: 15px;
+}
+
+
+/* =========================
+   KATEGORI
+========================= */
+
+.kategori-section {
+    background: #f8f1e7;
+}
+
+.kategori-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 18px;
+}
+
+
+/* CARD */
+
+.kategori-card {
+    height: 245px;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background-size: cover;
+    background-position: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(61, 35, 25, 0.14);
+
+    transition: 0.3s;
+}
+
+.kategori-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 27px rgba(61, 35, 25, 0.23);
+}
+
+
+/* OVERLAY */
+
+.kategori-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(30, 16, 11, 0.62);
+
+    transition: 0.3s;
+}
+
+.kategori-card:hover .kategori-overlay {
+    background: rgba(30, 16, 11, 0.48);
+}
+
+
+/* BLUR */
+
+.kategori-card::before {
+    content: "";
+
+    position: absolute;
+    inset: -8px;
+
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(3px);
+
+    transform: scale(1.05);
+
+    z-index: 0;
+}
+
+
+/* CONTENT */
+
+.kategori-content {
+    width: 100%;
+    height: 100%;
+
+    padding: 25px 18px;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.kategori-icon {
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.17);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    font-size: 32px;
+}
+
+.kategori-content h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.kategori-content p {
+    max-width: 180px;
+
+    color: #f7eee7;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   HASIL KATEGORI
+========================= */
+
+.hasil-section {
+    background: #fffaf4;
+}
+
+#menuKategori:empty {
+    display: none;
+}
+
+
+/* =========================
+   MENU FAVORIT
+========================= */
+
+.favorit-section {
+    background: #f0e3d4;
+}
+
+
+/* =========================
+   MENU CARD
+========================= */
+
+.menu-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.menu-card {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 13px;
+
+    box-shadow: 0 6px 18px rgba(61, 35, 25, 0.1);
+
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 25px rgba(61, 35, 25, 0.17);
+}
+
+.menu-image {
+    width: 100%;
+    height: 185px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.menu-info {
+    padding: 16px;
+}
+
+.menu-info h3 {
+    color: #362720;
+
+    font-size: 16px;
+
+    margin-bottom: 7px;
+}
+
+.menu-info p {
+    min-height: 62px;
+
+    color: #806b5d;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+}
+
+.menu-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+.menu-price {
+    color: #9d2824;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-pesan {
+    border: none;
+
+    padding: 8px 13px;
+
+    border-radius: 7px;
+
+    background: #9d2824;
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-pesan:hover {
+    background: #c03932;
+}
+
+
+/* =========================
+   PROMO
+========================= */
+
+.promo {
+    min-height: 280px;
+
+    margin: 65px 7%;
+
+    position: relative;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.promo-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(35, 17, 11, 0.65);
+}
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 35px 50px;
+
+    color: white;
+}
+
+.promo-content h2 {
+    font-size: 33px;
+    margin-bottom: 10px;
+}
+
+.promo-content p {
+    max-width: 570px;
+
+    color: #f4e8dc;
+
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================
+   PESANAN
+========================= */
+
+.pesanan-section {
+    background: #fffaf4;
+}
+
+.pesanan-checkout {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 24px;
+    align-items: start;
+}
+
+.pesanan-items-column {
+    min-width: 0;
+}
+
+.pesanan-items-heading {
+    margin-bottom: 14px;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.pesanan-items-heading h3 {
+    color: #362720;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.pesanan-items-heading span {
+    color: #907d70;
+    font-size: 12px;
+}
+
+#daftarPesanan {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.pesanan-item {
+    width: 100%;
+    min-height: 148px;
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    background: #ffffff;
+    border: 1px solid #eee2d7;
+    border-radius: 18px;
+
+    box-shadow: 0 7px 22px rgba(61, 35, 25, 0.075);
+
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.pesanan-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 11px 28px rgba(61, 35, 25, 0.11);
+}
+
+.pesanan-image-wrap {
+    width: 108px;
+    height: 108px;
+    flex: 0 0 108px;
+
+    overflow: hidden;
+    border-radius: 14px;
+    background: #f3e7dc;
+}
+
+.pesanan-image-wrap img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.pesanan-item-content {
+    min-width: 0;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+}
+
+.pesanan-item-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.pesanan-info {
+    min-width: 0;
+}
+
+.pesanan-info h4 {
+    margin-bottom: 5px;
+
+    color: #30231e;
+    font-size: 17px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.pesanan-price {
+    color: #9d2824;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-hapus {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ead9d3;
+    border-radius: 50%;
+
+    background: #fff8f5;
+    color: #9d2824;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-hapus:hover {
+    background: #f7e4df;
+    border-color: #dcb9b1;
+    transform: scale(1.04);
+}
+
+.hapus-icon {
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.pesanan-item-bottom {
+    margin-top: 15px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.quantity-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.quantity-btn {
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e3d7ce;
+    border-radius: 9px;
+
+    background: #f8f3ee;
+    color: #5e4a40;
+
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.quantity-btn:disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+.quantity-value {
+    min-width: 22px;
+
+    color: #362720;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.pesanan-subtotal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.pesanan-subtotal span {
+    color: #9a897e;
+    font-size: 11px;
+}
+
+.pesanan-subtotal strong {
+    color: #9d2824;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.pesanan-kosong {
+    min-height: 225px;
+    padding: 36px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #ffffff;
+    border: 1px dashed #dfcfc2;
+    border-radius: 18px;
+
+    box-shadow: 0 5px 18px rgba(61, 35, 25, 0.04);
+}
+
+.pesanan-kosong-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #faf0e6;
+
+    font-size: 25px;
+}
+
+.pesanan-kosong h3 {
+    margin-bottom: 4px;
+    color: #5f463b;
+    font-size: 16px;
+}
+
+.pesanan-kosong p {
+    max-width: 330px;
+    color: #907d70;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* SUMMARY CARD */
+.pesanan-summary-card {
+    padding: 23px;
+
+    background: #ffffff;
+    border: 1px solid #eee2d7;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(61, 35, 25, 0.09);
+
+    position: sticky;
+    top: 94px;
+}
+
+.summary-card-heading {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee2d7;
+}
+
+.summary-eyebrow {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #a87929;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+}
+
+.summary-card-heading h3 {
+    color: #362720;
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+.summary-items {
+    max-height: 245px;
+    margin-top: 5px;
+    overflow-y: auto;
+}
+
+.summary-item {
+    padding: 13px 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+
+    border-bottom: 1px solid #f0e6de;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item > div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.summary-item div strong {
+    color: #49372f;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.summary-item div span {
+    color: #9a897e;
+    font-size: 11px;
+}
+
+.summary-item > strong {
+    flex: 0 0 auto;
+
+    color: #7d1f1b;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.summary-empty {
+    padding: 19px 0;
+    color: #9a897e;
+    font-size: 12px;
+    text-align: center;
+}
+
+.summary-divider {
+    margin: 5px 0 17px;
+    border-top: 1px solid #eadbce;
+}
+
+.summary-total-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.summary-total-row span {
+    color: #49372f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.summary-total-row strong {
+    color: #9d2824;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.summary-note {
+    margin-top: 9px;
+    color: #9a897e;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    .pesanan-checkout {
+        grid-template-columns: 1fr;
+    }
+
+    .pesanan-summary-card {
+        position: static;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .pesanan-checkout {
+        gap: 16px;
+    }
+
+    .pesanan-items-heading h3 {
+        font-size: 17px;
+    }
+
+    .pesanan-item {
+        min-height: 130px;
+        padding: 14px;
+        gap: 13px;
+        border-radius: 15px;
+    }
+
+    .pesanan-image-wrap {
+        width: 82px;
+        height: 82px;
+        flex-basis: 82px;
+        border-radius: 11px;
+    }
+
+    .pesanan-info h4 {
+        font-size: 14px;
+    }
+
+    .pesanan-price {
+        font-size: 12px;
+    }
+
+    .pesanan-item-bottom {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .quantity-control {
+        gap: 6px;
+    }
+
+    .quantity-btn {
+        width: 29px;
+        height: 29px;
+        border-radius: 8px;
+    }
+
+    .quantity-value {
+        min-width: 18px;
+        font-size: 13px;
+    }
+
+    .pesanan-subtotal strong {
+        font-size: 14px;
+    }
+
+    .pesanan-summary-card {
+        padding: 19px;
+        border-radius: 15px;
+    }
+
+    .summary-card-heading h3 {
+        font-size: 17px;
+    }
+
+}
+/* =========================
+   TENTANG
+========================= */
+
+.tentang-section {
+    background: #f8f1e7;
+}
+
+.tentang-content {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: #6e5a4e;
+}
+
+.tentang-content p {
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 40px 7% 20px;
+
+    background: #29211e;
+
+    color: white;
+}
+
+.footer-content {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.footer-content h3 {
+    color: #f2c66d;
+
+    margin-bottom: 7px;
+}
+
+.footer-content p {
+    color: #d5c5ba;
+
+    font-size: 13px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 18px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: #a99a91;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    padding: 20px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(20, 10, 7, 0.75);
+
+    z-index: 2000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    width: 100%;
+    max-width: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 17px;
+
+    background: #fffaf4;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    width: 34px;
+    height: 34px;
+
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    z-index: 5;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+
+    font-size: 22px;
+}
+
+.modal-image {
+    width: 100%;
+    height: 230px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.modal-body {
+    padding: 22px;
+}
+
+.modal-body h2 {
+    color: #7d1f1b;
+
+    font-size: 23px;
+
+    margin-bottom: 5px;
+}
+
+.modal-harga {
+    color: #a87929;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.modal-body > p {
+    color: #806b5d;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+
+/* JUMLAH */
+
+.jumlah {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+.jumlah button {
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #9d2824;
+    color: white;
+
+    font-size: 20px;
+}
+
+.jumlah span {
+    min-width: 30px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+.modal-subtotal {
+    margin-bottom: 18px;
+
+    text-align: center;
+
+    color: #6f594d;
+}
+
+.modal-subtotal strong {
+    color: #9d2824;
+}
+
+.btn-tambah {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #9d2824;
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-tambah:hover {
+    background: #c03932;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+
+    .kategori-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .slide-content h1 {
+        font-size: 40px;
+    }
+
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 15px 5%;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 17px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .slider {
+        height: 430px;
+    }
+
+    .slide-content {
+        width: 82%;
+    }
+
+    .slide-content h1 {
+        font-size: 32px;
+    }
+
+    .slide-content p {
+        font-size: 14px;
+    }
+
+    .slider-arrow {
+        width: 35px;
+        height: 35px;
+
+        font-size: 17px;
+    }
+
+    .slider-arrow.prev {
+        left: 10px;
+    }
+
+    .slider-arrow.next {
+        right: 10px;
+    }
+
+
+    /* SECTION */
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+
+    /* KATEGORI */
+
+    .kategori-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 13px;
+    }
+
+    .kategori-card {
+        height: 205px;
+    }
+
+    .kategori-content {
+        padding: 15px 10px;
+    }
+
+    .kategori-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 27px;
+
+        margin-bottom: 10px;
+    }
+
+    .kategori-content h3 {
+        font-size: 15px;
+    }
+
+    .kategori-content p {
+        font-size: 11px;
+    }
+
+
+    /* MENU */
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 13px;
+    }
+
+    .menu-image {
+        height: 145px;
+    }
+
+    .menu-info {
+        padding: 12px;
+    }
+
+    .menu-info h3 {
+        font-size: 14px;
+    }
+
+    .menu-info p {
+        min-height: 68px;
+
+        font-size: 11px;
+    }
+
+    .menu-price {
+        font-size: 13px;
+    }
+
+    .btn-pesan {
+        padding: 7px 9px;
+
+        font-size: 11px;
+    }
+
+
+    /* PROMO */
+
+    .promo {
+        margin: 45px 5%;
+    }
+
+    .promo-content {
+        padding: 25px;
+    }
+
+    .promo-content h2 {
+        font-size: 27px;
+    }
+
+
+    /* PESANAN */
+
+    .pesanan-box {
+        padding: 17px;
+    }
+
+    .pesanan-item {
+        gap: 9px;
+    }
+
+    .pesanan-item img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .pesanan-info h4 {
+        font-size: 12px;
+    }
+
+    .pesanan-item > strong {
+        font-size: 11px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* MODAL */
+
+    .modal-box {
+        max-width: 95%;
+    }
+
+    .modal-image {
+        height: 190px;
+    }
+
+}
+
+
+/* =========================
+   HP KECIL
+========================= */
+
+@media (max-width: 450px) {
+
+    .nav-links {
+        gap: 11px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .slide-content h1 {
+        font-size: 28px;
+    }
+
+    .slide-content p {
+        font-size: 13px;
+    }
+
+    .kategori-card {
+        height: 190px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-image {
+        height: 190px;
+    }
+
+}
+
+/* =========================================================
+   FINAL PESANAN CHECKOUT OVERRIDE
+   Scope: #pesanan ONLY
+   ========================================================= */
+
+#pesanan .pesanan-checkout {
+    width: min(1160px, 100%);
+    margin: 0 auto;
+    padding: 24px;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 350px !important;
+    gap: 24px !important;
+    align-items: start !important;
+
+    background: #ffffff;
+    border: 1px solid #eee2d7;
+    border-radius: 24px;
+    box-shadow: 0 12px 34px rgba(61, 35, 25, 0.08);
+}
+
+#pesanan .pesanan-items-column {
+    min-width: 0;
+}
+
+#pesanan #daftarPesanan {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+}
+
+#pesanan .pesanan-item {
+    width: 100% !important;
+    min-height: 145px !important;
+    margin: 0 !important;
+    padding: 18px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    gap: 17px !important;
+
+    background: #ffffff !important;
+    border: 1px solid #eee2d7 !important;
+    border-radius: 18px !important;
+
+    box-shadow: 0 7px 22px rgba(61, 35, 25, 0.075) !important;
+}
+
+#pesanan .pesanan-image-wrap {
+    width: 108px !important;
+    height: 108px !important;
+    min-width: 108px !important;
+    flex: 0 0 108px !important;
+
+    overflow: hidden !important;
+    border-radius: 14px !important;
+}
+
+#pesanan .pesanan-image-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+#pesanan .pesanan-item-content {
+    min-width: 0 !important;
+    flex: 1 !important;
+    align-self: stretch !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+#pesanan .pesanan-info h4 {
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 5px !important;
+}
+
+#pesanan .pesanan-price {
+    font-size: 14px !important;
+}
+
+#pesanan .btn-hapus {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    flex: 0 0 34px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 50% !important;
+}
+
+#pesanan .pesanan-item-bottom {
+    margin-top: 14px !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+    gap: 18px !important;
+}
+
+#pesanan .quantity-control {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+#pesanan .quantity-btn {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border: 1px solid #e3d7ce !important;
+    border-radius: 9px !important;
+    background: #f8f3ee !important;
+}
+
+#pesanan .quantity-value {
+    min-width: 24px !important;
+    font-size: 14px !important;
+    text-align: center !important;
+}
+
+#pesanan .pesanan-subtotal {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+}
+
+#pesanan .pesanan-subtotal strong {
+    font-size: 16px !important;
+}
+
+#pesanan .pesanan-summary-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 23px !important;
+
+    position: sticky !important;
+    top: 94px !important;
+
+    background: #fffaf4 !important;
+    border: 1px solid #eee2d7 !important;
+    border-radius: 18px !important;
+
+    box-shadow: none !important;
+}
+
+#pesanan .summary-items {
+    max-height: 245px !important;
+    overflow-y: auto !important;
+}
+
+#pesanan .summary-total-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+#pesanan .summary-total-row strong {
+    font-size: 21px !important;
+}
+
+@media (max-width: 900px) {
+    #pesanan .pesanan-checkout {
+        grid-template-columns: 1fr !important;
+    }
+
+    #pesanan .pesanan-summary-card {
+        position: static !important;
+    }
+}
+
+@media (max-width: 700px) {
+    #pesanan .pesanan-checkout {
+        padding: 15px !important;
+        border-radius: 18px !important;
+        gap: 16px !important;
+    }
+
+    #pesanan .pesanan-item {
+        min-height: 125px !important;
+        padding: 14px !important;
+        gap: 12px !important;
+    }
+
+    #pesanan .pesanan-image-wrap {
+        width: 78px !important;
+        height: 78px !important;
+        min-width: 78px !important;
+        flex-basis: 78px !important;
+    }
+
+    #pesanan .pesanan-info h4 {
+        font-size: 14px !important;
+    }
+
+    #pesanan .pesanan-price {
+        font-size: 12px !important;
+    }
+
+    #pesanan .quantity-btn {
+        width: 29px !important;
+        height: 29px !important;
+        min-width: 29px !important;
+    }
+
+    #pesanan .pesanan-summary-card {
+        padding: 19px !important;
+    }
+}
+
+
+/* =========================================================
+   PESANAN OPTIONS + PAYMENT MODAL
+   Scope: Pesanan checkout only
+   ========================================================= */
+
+#pesanan .pesanan-options {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#pesanan .option-group {
+    padding: 14px;
+    border: 1px solid #eee2d7;
+    border-radius: 13px;
+    background: #ffffff;
+}
+
+#pesanan .option-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+#pesanan .option-heading > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#pesanan .option-heading strong,
+#pesanan .option-title {
+    color: #49372f;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#pesanan .option-heading span {
+    color: #9a897e;
+    font-size: 10px;
+}
+
+#pesanan .rice-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#pesanan .rice-control button {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e3d7ce;
+    border-radius: 8px;
+    background: #f8f3ee;
+    color: #5e4a40;
+    font-size: 17px;
+}
+
+#pesanan .rice-control span {
+    min-width: 18px;
+    color: #30231e;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#pesanan .option-title {
+    margin-bottom: 10px;
+}
+
+#pesanan .sambal-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+}
+
+#pesanan .sambal-option {
+    cursor: pointer;
+}
+
+#pesanan .sambal-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#pesanan .sambal-option span {
+    min-height: 34px;
+    padding: 7px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eadfd7;
+    border-radius: 8px;
+    background: #fffaf6;
+    color: #6f594d;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    transition: .2s;
+}
+
+#pesanan .sambal-option input:checked + span {
+    border-color: #9d2824;
+    background: #f8e8e3;
+    color: #9d2824;
+}
+
+#pesanan .summary-subtotal-row,
+#pesanan .summary-rice-row,
+#pesanan .summary-sambal-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 7px;
+}
+
+#pesanan .summary-subtotal-row span,
+#pesanan .summary-rice-row span,
+#pesanan .summary-sambal-row span {
+    color: #806b5d;
+    font-size: 12px;
+}
+
+#pesanan .summary-subtotal-row strong,
+#pesanan .summary-rice-row strong,
+#pesanan .summary-sambal-row strong {
+    color: #5e4a40;
+    font-size: 12px;
+}
+
+#pesanan .btn-lanjut-pembayaran {
+    width: 100%;
+    margin-top: 17px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #9d2824;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s;
+}
+
+#pesanan .btn-lanjut-pembayaran:hover {
+    background: #7d1f1b;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   CHECKOUT OPTIONS
+========================= */
+
+#pesanan .pesanan-extra-options {
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#pesanan .checkout-option {
+    padding: 13px;
+    border: 1px solid #eadfd7;
+    border-radius: 13px;
+    background: #fffdfb;
+}
+
+#pesanan .checkout-option-label {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 10px;
+}
+
+#pesanan .checkout-option-label strong {
+    color: #49372f;
+    font-size: 13px;
+}
+
+#pesanan .checkout-option-label small {
+    color: #9a897e;
+    font-size: 10px;
+}
+
+#pesanan .checkout-option:not(.sambal-checkout-option) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+#pesanan .checkout-option:not(.sambal-checkout-option) .checkout-option-label {
+    margin-bottom: 0;
+}
+
+#pesanan .rice-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#pesanan .rice-control button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e3d7ce;
+    border-radius: 9px;
+    background: #f8f3ee;
+    color: #5e4a40;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#pesanan .rice-control span {
+    min-width: 20px;
+    text-align: center;
+    color: #30231e;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+#pesanan .sambal-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+}
+
+#pesanan .sambal-option {
+    cursor: pointer;
+}
+
+#pesanan .sambal-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#pesanan .sambal-option span {
+    min-height: 34px;
+    padding: 7px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #eadfd7;
+    border-radius: 8px;
+    background: #fffaf6;
+    color: #6b5549;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#pesanan .sambal-option input:checked + span {
+    border-color: #9d2824;
+    background: #9d2824;
+    color: #ffffff;
+}
+
+#pesanan .summary-money-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+#pesanan .summary-money-row span {
+    color: #806b5d;
+    font-size: 12px;
+}
+
+#pesanan .summary-money-row strong {
+    color: #5e4a40;
+    font-size: 12px;
+}
+
+#pesanan .btn-lanjut-pembayaran {
+    width: 100%;
+    margin-top: 17px;
+    min-height: 46px;
+    padding: 12px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 0;
+    border-radius: 12px;
+    background: #9d2824;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow: 0 7px 18px rgba(157, 40, 36, .18);
+    transition: .2s ease;
+}
+
+#pesanan .btn-lanjut-pembayaran:hover {
+    background: #7d1f1b;
+    transform: translateY(-1px);
+}
+
+#pesanan .btn-lanjut-pembayaran span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* =========================
+   CENTERED PAYMENT MODAL
+========================= */
+
+
+.payment-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    padding: 20px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(25, 16, 12, .46);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.payment-modal.show {
+    display: flex;
+}
+
+.payment-card {
+    width: min(470px, 100%);
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    position: relative;
+    padding: 26px;
+
+    background: #fffaf4;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 22px;
+    box-shadow: 0 25px 70px rgba(35, 19, 14, .28);
+}
+
+.payment-close {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    border: 1px solid #ead9d3;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #7d1f1b;
+    font-size: 21px;
+    line-height: 1;
+}
+
+.payment-card-header {
+    padding-right: 38px;
+}
+
+.payment-eyebrow {
+    display: block;
+    margin-bottom: 4px;
+    color: #a87929;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    font-weight: 800;
+}
+
+.payment-card-header h2 {
+    color: #362720;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.payment-card-header p {
+    color: #806b5d;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.payment-total-preview {
+    margin: 20px 0;
+    padding: 15px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border: 1px solid #eee2d7;
+    border-radius: 13px;
+    background: #ffffff;
+}
+
+.payment-total-preview span {
+    color: #806b5d;
+    font-size: 12px;
+}
+
+.payment-total-preview strong {
+    color: #9d2824;
+    font-size: 20px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-method {
+    width: 100%;
+    padding: 13px;
+    display: grid;
+    grid-template-columns: 38px 1fr 20px;
+    align-items: center;
+    gap: 11px;
+    text-align: left;
+    border: 1px solid #eadfd7;
+    border-radius: 13px;
+    background: #ffffff;
+    color: #30231e;
+    transition: .2s;
+}
+
+.payment-method:hover {
+    border-color: #d8b9b0;
+}
+
+.payment-method.active {
+    border-color: #9d2824;
+    background: #fff7f3;
+    box-shadow: 0 0 0 2px rgba(157,40,36,.07);
+}
+
+.payment-method-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #f6ece4;
+    color: #9d2824;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.payment-method > span:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.payment-method strong {
+    font-size: 13px;
+}
+
+.payment-method small {
+    color: #9a897e;
+    font-size: 10px;
+}
+
+.payment-radio {
+    width: 17px;
+    height: 17px;
+    border: 1.5px solid #d5c7be;
+    border-radius: 50%;
+    position: relative;
+}
+
+.payment-method.active .payment-radio {
+    border-color: #9d2824;
+}
+
+.payment-method.active .payment-radio::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 50%;
+    background: #9d2824;
+}
+
+.btn-konfirmasi-pesanan {
+    width: 100%;
+    margin-top: 18px;
+    padding: 13px 16px;
+    border: none;
+    border-radius: 11px;
+    background: #9d2824;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.btn-konfirmasi-pesanan:hover {
+    background: #7d1f1b;
+}
+
+@media (max-width: 600px) {
+    #pesanan .sambal-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .payment-card {
+        padding: 21px;
+        border-radius: 18px;
+    }
+}
+
+
+/* =========================================================
+   FINAL PESANAN CHECKOUT OVERRIDE
+   Scope: #pesanan + payment modal only
+========================================================= */
+
+#pesanan .pesanan-extra-options {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 17px;
+}
+
+#pesanan .checkout-option {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 13px;
+    border: 1px solid #eadfd7;
+    border-radius: 13px;
+    background: #fffdfb;
+}
+
+#pesanan .checkout-option:not(.sambal-checkout-option) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#pesanan .checkout-option-label {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+#pesanan .checkout-option-label strong {
+    color: #49372f;
+    font-size: 13px;
+}
+
+#pesanan .checkout-option-label small {
+    color: #9a897e;
+    font-size: 10px;
+}
+
+#pesanan .rice-control {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
+#pesanan .rice-control button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e3d7ce;
+    border-radius: 9px;
+    background: #f8f3ee;
+    color: #5e4a40;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#pesanan .rice-control span {
+    min-width: 20px;
+    color: #30231e;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#pesanan .sambal-options {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+}
+
+#pesanan .sambal-option {
+    display: block;
+    cursor: pointer;
+}
+
+#pesanan .sambal-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#pesanan .sambal-option span {
+    min-height: 34px;
+    padding: 7px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eadfd7;
+    border-radius: 8px;
+    background: #fffaf6;
+    color: #6b5549;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#pesanan .sambal-option input:checked + span {
+    border-color: #9d2824;
+    background: #9d2824;
+    color: #fff;
+}
+
+#pesanan .summary-money-row {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+#pesanan .summary-total-row {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+#pesanan .btn-lanjut-pembayaran {
+    display: flex !important;
+    width: 100%;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 17px;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 12px;
+    background: #9d2824;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.payment-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    padding: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(25, 16, 12, .46);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.payment-modal.show {
+    display: flex !important;
+}
+
+.payment-card {
+    width: min(470px, 100%);
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    position: relative;
+    padding: 26px;
+    background: #fffaf4;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 22px;
+    box-shadow: 0 25px 70px rgba(35, 19, 14, .28);
+}
+
+.payment-close {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    border: 1px solid #ead9d3;
+    border-radius: 50%;
+    background: #fff;
+    color: #7d1f1b;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.payment-card-header h2 {
+    color: #362720;
+    font-size: 24px;
+    margin: 4px 0;
+}
+
+.payment-card-header p {
+    color: #806b5d;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.payment-total-preview {
+    margin: 20px 0;
+    padding: 15px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border: 1px solid #eee2d7;
+    border-radius: 13px;
+    background: #fff;
+}
+
+.payment-total-preview strong {
+    color: #9d2824;
+    font-size: 20px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-method {
+    width: 100%;
+    padding: 13px;
+    display: grid;
+    grid-template-columns: 38px 1fr 20px;
+    align-items: center;
+    gap: 11px;
+    text-align: left;
+    border: 1px solid #eadfd7;
+    border-radius: 13px;
+    background: #fff;
+    color: #30231e;
+    cursor: pointer;
+}
+
+.payment-method.active {
+    border-color: #9d2824;
+    background: #fff7f3;
+    box-shadow: 0 0 0 2px rgba(157,40,36,.07);
+}
+
+.payment-method-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #f6ece4;
+    color: #9d2824;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.payment-method > span:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.payment-method strong { font-size: 13px; }
+.payment-method small { color: #9a897e; font-size: 10px; }
+
+.payment-radio {
+    width: 17px;
+    height: 17px;
+    border: 1.5px solid #d5c7be;
+    border-radius: 50%;
+    position: relative;
+}
+
+.payment-method.active .payment-radio { border-color: #9d2824; }
+
+.payment-method.active .payment-radio::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 50%;
+    background: #9d2824;
+}
+
+.btn-konfirmasi-pesanan {
+    width: 100%;
+    margin-top: 18px;
+    padding: 13px 16px;
+    border: 0;
+    border-radius: 11px;
+    background: #9d2824;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #pesanan .sambal-options { grid-template-columns: repeat(2, 1fr); }
+    .payment-card { padding: 21px; border-radius: 18px; }
+}
+
+
+/* =========================================================
+   PESANAN — MODAL DASHBOARD
+   Hanya aktif saat navbar Pesanan diklik dan ada item pesanan.
+   ========================================================= */
+#pesanan.pesanan-dashboard {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    background: rgba(35, 23, 18, 0.48);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+#pesanan.pesanan-dashboard.pesanan-visible {
+    display: flex;
+}
+
+body.pesanan-dashboard-open {
+    overflow: hidden;
+}
+
+.pesanan-dashboard-inner {
+    width: min(1280px, 100%);
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    padding: 28px;
+    background: #fffaf4;
+    border: 1px solid #eadfd7;
+    border-radius: 24px;
+    box-shadow: 0 28px 80px rgba(35, 23, 18, 0.24);
+}
+
+.pesanan-dashboard-heading {
+    margin-bottom: 22px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dashboard-eyebrow {
+    display: block;
+    margin-bottom: 4px;
+    color: #a87929;
+    font-size: 11px;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+}
+
+.pesanan-dashboard-heading h2 {
+    color: #7d1f1b;
+    font-size: 31px;
+    line-height: 1.2;
+}
+
+.pesanan-dashboard-heading p {
+    margin-top: 6px;
+    color: #806b5d;
+    font-size: 14px;
+}
+
+.dashboard-back {
+    flex: 0 0 auto;
+    padding: 10px 15px;
+    border: 1px solid #eadfd7;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #6f594d;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#pesanan.pesanan-dashboard .pesanan-checkout {
+    width: 100%;
+    margin: 0;
+}
+
+#pesanan.pesanan-dashboard .pesanan-summary-card {
+    position: sticky;
+    top: 0;
+}
+
+@media (max-width: 900px) {
+    #pesanan.pesanan-dashboard {
+        padding: 18px;
+    }
+
+    .pesanan-dashboard-inner {
+        max-height: calc(100vh - 36px);
+        padding: 20px;
+    }
+
+    .pesanan-dashboard-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #pesanan.pesanan-dashboard .pesanan-checkout {
+        grid-template-columns: 1fr !important;
+    }
+
+    #pesanan.pesanan-dashboard .pesanan-summary-card {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    #pesanan.pesanan-dashboard {
+        padding: 10px;
+    }
+
+    .pesanan-dashboard-inner {
+        max-height: calc(100vh - 20px);
+        padding: 17px;
+        border-radius: 18px;
+    }
+
+    .pesanan-dashboard-heading h2 {
+        font-size: 26px;
+    }
+}
+
+/* =========================================
+   RM RAJO SALERO — LUXURY TYPOGRAPHY
+========================================= */
+
+/* BRAND */
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* SECTION TITLE */
+.section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+/* HERO */
+.slide-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+/* CATEGORY */
+.kategori-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* MENU CARD */
+.menu-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+/* PRICE */
+.menu-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* BUTTON */
+.btn-pesan,
+.slide-content button,
+.btn-tambah,
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* PESANAN */
+.pesanan-section h2,
+.pesanan-box h2,
+.pesanan-summary h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+}
+
+/* MODAL MENU */
+.modal-body h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* TENTANG */
+.tentang-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+}
+
+/* FOOTER BRAND */
+.footer h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+}
+
+/* =========================
+   ADMIN LOGIN - FOOTER
+========================= */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.admin-login-link {
+    display: inline-block;
+    color: #cdb28a;
+    font-size: 11px;
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.admin-login-link:hover {
+    color: #f2c66d;
+    opacity: 1;
+}
+
+/* =========================
+   BADGE PESANAN
+========================= */
+
+.pesanan-badge {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 20px;
+    height: 20px;
+
+    padding: 0 6px;
+
+    margin-left: 5px;
+
+    border-radius: 50px;
+
+    background: #b58b52;
+    color: #fff;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.pesanan-badge.show {
+    display: inline-flex;
+}
+/* =========================
+   CUSTOMER FORM
+========================= */
+
+.customer-form {
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+
+.customer-form h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #3b2721;
+}
+
+
+.customer-form .form-group {
+    margin-bottom: 16px;
+}
+
+
+.customer-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6d5147;
+    margin-bottom: 8px;
+}
+
+
+.customer-form input,
+.customer-form textarea {
+
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 1px solid #eadbd2;
+    border-radius: 12px;
+
+    background: #fffaf6;
+
+    font-size: 14px;
+    color: #3b2721;
+
+    outline: none;
+
+    transition: .2s;
+}
+
+
+.customer-form textarea {
+    min-height: 90px;
+    resize: none;
+}
+
+
+.customer-form input:focus,
+.customer-form textarea:focus {
+
+    border-color: #a52a2a;
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(165,42,42,.12);
+}

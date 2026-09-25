@@ -1,0 +1,409 @@
+/* ===============================
+   KEUANGAN PAGE STYLE
+================================ */
+
+
+/* SUMMARY */
+
+.summary-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:35px;
+}
+
+
+.summary-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:28px 35px;
+
+    height:125px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    border:1px solid #eee2d8;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.04);
+
+}
+
+
+
+.summary-card span{
+
+    font-size:15px;
+
+    color:#8b766b;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.summary-card strong{
+
+    font-family:Georgia,serif;
+
+    font-size:34px;
+
+    color:#991b1e;
+
+}
+
+
+
+
+
+/* TABLE CONTAINER */
+
+
+.table-wrapper{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    margin-top:35px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+
+
+.table-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.table-header h2{
+
+    margin:0;
+
+    font-size:26px;
+
+    color:#24120b;
+
+}
+
+
+
+
+/* BUTTON */
+
+
+.btn-tambah{
+
+    background:#991b1e;
+
+    color:white;
+
+    padding:13px 24px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    font-size:14px;
+
+}
+
+
+
+.btn-tambah:hover{
+
+    background:#781417;
+
+}
+
+
+
+
+
+
+/* TABLE */
+
+
+.keuangan-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+.keuangan-table thead{
+
+    background:#991b1e;
+
+    color:white;
+
+}
+
+
+
+.keuangan-table th{
+
+    padding:18px;
+
+    text-align:left;
+
+    font-size:15px;
+
+}
+
+
+
+.keuangan-table td{
+
+    padding:18px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+.keuangan-table tbody tr:hover{
+
+    background:#faf6f1;
+
+}
+
+
+
+
+
+/* LABEL */
+
+.masuk{
+
+    background:#dff5e8;
+
+    color:#13804a;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+}
+
+
+
+.keluar{
+
+    background:#ffe0e0;
+
+    color:#c52222;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+}
+
+
+
+
+/* FOOTER */
+
+.admin-footer{
+
+    margin-top:40px;
+
+}
+
+.form-card{
+
+background:white;
+
+border-radius:25px;
+
+padding:35px;
+
+margin-top:35px;
+
+max-width:700px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+
+
+.form-card h2{
+
+margin-bottom:25px;
+
+}
+
+
+
+.form-card label{
+
+display:block;
+
+margin-top:18px;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+color:#4b372f;
+
+}
+
+
+
+.form-card input,
+.form-card select,
+.form-card textarea{
+
+
+width:100%;
+
+padding:14px 16px;
+
+border:1px solid #ddd;
+
+border-radius:12px;
+
+font-size:15px;
+
+box-sizing:border-box;
+
+}
+
+
+
+.form-card textarea{
+
+height:120px;
+
+resize:none;
+
+}
+
+
+
+.form-card button{
+
+margin-top:25px;
+
+background:#991b1e;
+
+color:white;
+
+border:none;
+
+padding:14px 30px;
+
+border-radius:12px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+
+
+.form-card button:hover{
+
+background:#791417;
+
+}
+
+.btn-edit{
+
+background:#f2d8a7;
+color:#7a4b00;
+
+padding:8px 18px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+font-weight:600;
+
+margin-right:8px;
+
+}
+
+
+
+.btn-hapus{
+
+background:#ffdada;
+color:#a00000;
+
+padding:8px 18px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+
+
+.masuk{
+
+background:#d9f5e5;
+
+color:#138a45;
+
+padding:7px 18px;
+
+border-radius:20px;
+
+font-weight:600;
+
+}
+
+
+
+.keluar{
+
+background:#ffdede;
+
+color:#b00000;
+
+padding:7px 18px;
+
+border-radius:20px;
+
+font-weight:600;
+
+}

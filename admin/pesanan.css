@@ -1,0 +1,480 @@
+/* =====================================
+   PESANAN PAGE STYLE
+===================================== */
+
+
+/* SUMMARY */
+
+.order-summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.order-summary-card{
+
+    background:white;
+
+    border:1px solid #eadfd5;
+
+    border-radius:20px;
+
+    padding:25px;
+
+
+}
+
+
+
+.order-summary-card span{
+
+    display:block;
+
+    color:#8f8178;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.order-summary-card strong{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:38px;
+
+    color:#941c1c;
+
+}
+
+
+
+
+
+
+/* GRID PESANAN */
+
+
+.order-grid{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+/* CARD */
+
+
+.order-card{
+
+
+    background:white;
+
+    border:1px solid #eadfd5;
+
+    border-radius:24px;
+
+    padding:25px;
+
+
+    min-height:420px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    box-shadow:0 5px 20px rgba(0,0,0,.04);
+
+
+}
+
+
+
+.order-card:hover{
+
+    transform:translateY(-3px);
+
+    transition:.2s;
+
+}
+
+
+
+
+
+
+
+/* HEADER */
+
+
+.order-header{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    padding-bottom:15px;
+
+    margin-bottom:15px;
+
+    border-bottom:1px solid #eee4db;
+
+
+}
+
+
+
+.order-number{
+
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#941c1c;
+
+
+}
+
+
+
+
+
+/* STATUS */
+
+
+.status-badge{
+
+
+    padding:7px 14px;
+
+    border-radius:20px;
+
+    background:#f8dfc5;
+
+    color:#99530b;
+
+    font-size:12px;
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+
+/* CUSTOMER */
+
+
+.customer-info{
+
+
+    background:#faf5ef;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.customer-info p{
+
+
+    margin:8px 0;
+
+    color:#5e5148;
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+
+/* DETAIL MENU */
+
+
+.order-menu{
+
+
+    flex:1;
+
+}
+
+
+
+.order-menu h4{
+
+
+    margin-bottom:12px;
+
+    color:#24150f;
+
+}
+
+
+
+.order-menu-item{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    padding:10px 0;
+
+
+    border-bottom:1px dashed #ddd;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.order-menu-item:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+.order-menu-item span{
+
+
+    color:#5d5047;
+
+}
+
+
+
+
+.order-menu-item strong{
+
+
+    color:#941c1c;
+
+
+}
+
+
+
+
+
+
+/* TOTAL */
+
+
+.order-total{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    margin-top:20px;
+
+
+    padding-top:15px;
+
+    border-top:2px solid #eee;
+
+
+}
+
+
+
+.order-total span{
+
+
+    color:#81736b;
+
+
+}
+
+
+
+.order-total strong{
+
+
+    font-size:22px;
+
+    color:#941c1c;
+
+
+}
+
+
+
+
+
+
+/* BUTTON AREA */
+
+
+.order-action{
+
+
+    margin-top:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+
+}
+
+
+
+.order-action form{
+
+    width:100%;
+
+}
+
+
+
+.order-action button{
+
+
+    width:100%;
+
+
+    padding:13px;
+
+
+    border:none;
+
+
+    border-radius:14px;
+
+
+    background:#941c1c;
+
+
+    color:white;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+.order-action button:hover{
+
+
+    background:#741414;
+
+
+}
+
+
+
+
+
+.order-action button:disabled{
+
+
+    background:#ddd;
+
+    color:#777;
+
+
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:1200px){
+
+
+.order-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.order-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.order-summary{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+

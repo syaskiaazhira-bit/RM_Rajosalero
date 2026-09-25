@@ -1,0 +1,974 @@
+/* ===============================
+SIDEBAR FIX
+================================ */
+
+
+.sidebar{
+
+    width:280px;
+
+    min-height:100vh;
+
+    background:#fff;
+
+    border-right:1px solid #eadfd5;
+
+    display:flex;
+
+    flex-direction:column;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+}
+
+
+
+.admin-layout{
+
+    display:flex;
+
+}
+
+
+
+.main-content{
+
+    margin-left:280px;
+
+    width:calc(100% - 280px);
+
+    padding:35px 45px;
+
+}
+
+
+
+
+
+.brand-admin{
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+.brand-logo{
+
+    width:50px;
+
+    height:50px;
+
+    background:#941c1c;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:bold;
+
+}
+
+
+
+.brand-admin h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#7d1717;
+
+    font-size:22px;
+
+}
+
+
+
+.brand-admin span{
+
+    font-size:12px;
+
+    color:#999;
+
+}
+
+
+
+
+
+.sidebar-menu{
+
+    padding:20px;
+
+}
+
+
+
+.menu-item{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+
+    padding:14px 18px;
+
+
+    margin-bottom:8px;
+
+
+    border-radius:14px;
+
+
+    text-decoration:none;
+
+
+    color:#5f5148;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+.menu-item:hover,
+.menu-item.active{
+
+
+    background:#f5dfdf;
+
+    color:#941c1c;
+
+    font-weight:600;
+
+
+}
+
+
+
+.menu-icon{
+
+    width:25px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+.sidebar-bottom{
+
+    margin-top:auto;
+
+    padding:25px;
+
+    border-top:1px solid #eee;
+
+}
+
+
+.admin-profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.profile-avatar{
+
+    width:40px;
+
+    height:40px;
+
+    background:#f2dfb0;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:bold;
+
+}
+
+
+
+.profile-info span{
+
+    display:block;
+
+    font-size:12px;
+
+    color:#999;
+
+}
+
+
+
+.logout{
+
+    display:block;
+
+    margin-top:20px;
+
+    color:#941c1c;
+
+    text-decoration:none;
+
+}
+
+/* ===============================
+   RESET
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background:#f8f5ef;
+    color:#2d211b;
+
+    font-family:'Montserrat', sans-serif;
+
+}
+
+
+
+/* ===============================
+   LAYOUT
+================================ */
+
+
+.admin-layout{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+
+
+.main-content{
+
+    flex:1;
+    padding:35px 45px;
+
+}
+
+
+
+/* ===============================
+   TOPBAR
+================================ */
+
+
+.topbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+
+.breadcrumb{
+
+    color:#9b8c82;
+    font-size:13px;
+    margin-bottom:10px;
+
+}
+
+
+.topbar h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    color:#24150f;
+
+}
+
+
+
+.welcome{
+
+    color:#8b7b70;
+    margin-top:5px;
+
+}
+
+
+
+.topbar-date{
+
+    background:white;
+
+    padding:18px 25px;
+
+    border-radius:18px;
+
+    border:1px solid #eaded2;
+
+    text-align:center;
+
+}
+
+
+.topbar-date span{
+
+    display:block;
+
+    font-size:12px;
+
+    color:#a28c80;
+
+}
+
+
+
+.topbar-date strong{
+
+    color:#941c1c;
+
+}
+
+
+
+/* ===============================
+ SUMMARY CARD
+================================ */
+
+
+.summary-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.summary-card{
+
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+
+    border:1px solid #eadfd5;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.summary-card:before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:5px;
+
+}
+
+
+
+.summary-card.red:before{
+    background:#991b1b;
+}
+
+
+.summary-card.gold:before{
+    background:#d5a72c;
+}
+
+
+.summary-card.green:before{
+    background:#5b8d72;
+}
+
+
+.summary-card.orange:before{
+    background:#b87333;
+}
+
+
+
+.summary-icon{
+
+
+    width:55px;
+
+    height:55px;
+
+    background:#faf3eb;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
+
+}
+
+
+
+.summary-card span{
+
+    font-size:14px;
+
+    color:#8f8178;
+
+}
+
+
+
+.summary-card strong{
+
+    display:block;
+
+    font-size:27px;
+
+    margin:5px 0;
+
+    color:#1f1a17;
+
+}
+
+
+
+.summary-card small{
+
+    color:#a49388;
+
+}
+
+
+
+
+
+/* ===============================
+ CONTENT GRID
+================================ */
+
+
+.content-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+}
+
+
+
+
+
+.dashboard-card{
+
+
+    background:white;
+
+    border-radius:25px;
+
+    border:1px solid #eadfd5;
+
+    padding:30px;
+
+}
+
+
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.card-header h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+}
+
+
+
+.card-header p{
+
+    color:#96877d;
+
+    font-size:13px;
+
+}
+
+
+
+.view-all{
+
+    color:#991b1b;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+
+
+
+/* ===============================
+ PESANAN TERBARU CARD
+================================ */
+
+
+.order-container{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+
+}
+
+
+
+
+.order-card{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    padding:18px;
+
+
+    border:1px solid #eadfd5;
+
+    border-radius:18px;
+
+
+    background:#fffdf9;
+
+
+    transition:.2s;
+
+
+}
+
+
+
+.order-card:hover{
+
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+
+}
+
+
+
+.order-user h3{
+
+
+    font-size:18px;
+
+    margin-bottom:8px;
+
+    color:#2b1b15;
+
+}
+
+
+
+.order-user p{
+
+
+    font-size:14px;
+
+    color:#88786e;
+
+}
+
+
+
+
+.order-info{
+
+
+    text-align:right;
+
+}
+
+
+
+.order-info h4{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    color:#991b1b;
+
+}
+
+
+
+
+.order-status{
+
+
+    padding:7px 15px;
+
+    border-radius:20px;
+
+    background:#f6dfc8;
+
+    color:#8b4c12;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+
+
+
+/* ===============================
+ STATUS
+================================ */
+
+
+
+.status-row{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #eee5dc;
+
+}
+
+
+
+.status-row:last-child{
+
+    border:none;
+
+}
+
+
+
+.status-row span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+
+.status-dot{
+
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+}
+
+
+
+.pending{
+
+    background:#d9a441;
+
+}
+
+
+.process{
+
+    background:#6d91aa;
+
+}
+
+
+.done{
+
+    background:#5b8d72;
+
+}
+
+
+
+
+
+/* ===============================
+ QUICK ACCESS
+================================ */
+
+
+.quick-card{
+
+    margin-top:30px;
+
+}
+
+
+
+.quick-grid{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+
+}
+
+
+
+.quick-item{
+
+
+    text-decoration:none;
+
+    color:#2b1b15;
+
+    background:#fffdf9;
+
+    border:1px solid #eadfd5;
+
+    border-radius:18px;
+
+    padding:22px;
+
+
+    transition:.2s;
+
+
+}
+
+
+
+.quick-item:hover{
+
+
+    transform:translateY(-4px);
+
+
+}
+
+
+
+.quick-item span{
+
+
+    font-size:30px;
+
+    display:block;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.quick-item strong{
+
+
+    display:block;
+
+}
+
+
+
+.quick-item small{
+
+
+    color:#98877d;
+
+}
+
+
+
+
+
+/* ===============================
+ EMPTY
+================================ */
+
+
+.empty-state{
+
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#8f8178;
+
+}
+
+
+
+.empty-icon{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* ===============================
+ FOOTER
+================================ */
+
+
+.admin-footer{
+
+
+    text-align:center;
+
+    margin-top:40px;
+
+    color:#9c8c82;
+
+    font-size:12px;
+
+
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.summary-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.content-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.quick-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
